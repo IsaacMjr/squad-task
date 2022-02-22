@@ -1,0 +1,11 @@
+.timer-details {
+  display: flex;
+  width: 100%;
+}
+.timer-details > span {
+  margin: 5px;
+}
+.timer-digits {
+  font-weight: 600;
+  font-size: larger;
+}

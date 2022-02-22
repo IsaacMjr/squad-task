@@ -1,0 +1,15 @@
+.studnet{
+    background-color: white;
+    width: 70vw;
+    height: 80vh;
+    position: relative;
+}
+.student-bio{
+    display: flex;
+    flex-direction: column;
+    
+}
+.student-close{
+    position: absolute;
+    bottom: 10px;
+}

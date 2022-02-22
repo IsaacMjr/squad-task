@@ -1,0 +1,20 @@
+.rate {
+  background-color: white;
+  height: 70vh;
+  width: 50vw;
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 1;
+}
+.rate > p {
+  margin-top: 10px;
+}
+.rate-textarea {
+  margin-top: 10px;
+}
+.rate-stars {
+  margin-top: 20px;
+}
+.rate-submit {
+  margin-top: 10px;
+}

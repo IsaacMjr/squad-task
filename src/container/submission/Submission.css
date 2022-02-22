@@ -1,0 +1,62 @@
+.submissions {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
+  box-shadow: 0px 0px 5px lightgrey;
+  padding: 10px;
+}
+.submissions-title {
+  font-size: x-large;
+  font-weight: 500;
+}
+.sub-skills {
+  display: flex;
+  align-items: center;
+}
+.sb-skill-p {
+  margin-right: 10px;
+  margin-top: 5px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.sb-skill-value {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sb-avarage {
+  display: flex;
+  align-items: center;
+}
+.sb-avarage > p {
+  margin: 10px;
+}
+.sb-create-grp {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.sb-ct-gp {
+  color: red;
+}
+.MuiBackdrop-root {
+  z-index: 1;
+}
+
+.sb-btns {
+  display: block;
+}
+
+/* backdrop */
+.sb-backdrop {
+  width: 50vw;
+  height: 50vh;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+}
+.sb-close {
+  position: absolute;
+  bottom: 0px;
+}

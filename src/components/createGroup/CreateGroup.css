@@ -1,0 +1,9 @@
+.create {
+  display: flex;
+  flex-direction: column;
+}
+.create-title {
+  font-size: larger;
+  font-weight: 700;
+  text-align: center;
+}

@@ -1,0 +1,96 @@
+.groupRoom {
+  width: 95vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.groupRoom-nav {
+  width: 30%;
+  height: 50vh;
+  padding-left: 10px;
+}
+.grpRm-nav {
+  border-radius: 10px;
+  background-color: #f8f8f7;
+  padding-right: 10px;
+  padding-left: 5px;
+}
+.grpRm-nav-name {
+  font-size: x-large;
+  font-weight: 600;
+  border-bottom: 5px solid white;
+  padding-bottom: 10px;
+}
+.grpRm-name {
+  font-size: x-large;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.grpRm-cont-member {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+}
+.grpRm-member {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  text-transform: capitalize;
+}
+
+.grpRm-nav-rem {
+  background-color: #f8f8f7;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.groupChat-container {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f8f8f7;
+  border-radius: 10px;
+}
+
+.groupChat {
+  height: 70vh;
+  padding: 5px;
+  overflow-y: scroll;
+}
+.grpCht-contain {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.grpCht-error {
+  display: flex;
+  align-items: center;
+}
+.grpCht-error > div {
+  margin-left: 10px;
+}
+.grpCht-message {
+  display: flex;
+}
+.grpCht-msg {
+  margin-left: 10px;
+}
+.grpCht-name {
+  font-weight: 700;
+  font-size: large;
+}
+.grpCht-mesgs {
+  font-size: larger;
+}
+.grpCht-time {
+  color: #808080;
+  font-size: small;
+}
+.up-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.groupChat::-webkit-scrollbar {
+  width: 2px;
+}
+/* .groupChat::-webkit-scrollbar-button {
+  display: none;
+} */

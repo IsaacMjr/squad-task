@@ -1,0 +1,33 @@
+.groupDetails {
+  width: 95vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+.grp-image-cont {
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+}
+.grp-logo {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.grp-name-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.grp-name {
+  font-size: xx-large;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.grp-nm-part {
+  color: grey;
+}
+.grp-desc {
+  margin-top: 20px;
+}
+.btn-link > a {
+  text-decoration: none;
+}
