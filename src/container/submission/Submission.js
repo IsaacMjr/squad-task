@@ -67,7 +67,8 @@ function Submission(props) {
   // function to submit to the database
   const submitSurvey = () => {
     db.collection("users")
-      .add({
+      .doc(user.uid)
+      .update({
         analysisSkills: analysisValue,
         codingSkills: codingValue,
         collaborativeSkills: collabValue,
@@ -93,7 +94,7 @@ function Submission(props) {
     setTechnicalValue("");
     setCommValue("");
   };
-  console.log(user);
+  // console.log(user);
   // console.log(analysisValue);
   return (
     <div className="submissions">

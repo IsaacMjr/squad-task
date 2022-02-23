@@ -1,15 +1,19 @@
-.studnet{
-    background-color: white;
-    width: 70vw;
-    height: 80vh;
-    position: relative;
+.studnet {
+  background-color: white;
+  width: 40vw;
+  height: 90vh;
+  position: relative;
+  border-radius: 10px;
 }
-.student-bio{
-    display: flex;
-    flex-direction: column;
-    
+.student-bio {
+  display: flex;
+  flex-direction: column;
 }
-.student-close{
-    position: absolute;
-    bottom: 10px;
+.student-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.student-button {
+  margin-left: 5px;
 }

@@ -8,9 +8,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { googleProvider, auth, db } from "./squad-config";
 import GroupDetails from "./container/groupDetails/GroupDetails";
 import GroupRoom from "./container/groupRoom/GroupRoom";
-import OptionalAuth from "./components/optionalAuth/OptionalAuth"
-import StudentAuth from "./components/optionalAuth/StudentAuth"
-import TeacherAuth from "./components/optionalAuth/TeacherAuth"
+import OptionalAuth from "./components/optionalAuth/OptionalAuth";
+import StudentAuth from "./components/optionalAuth/StudentAuth";
+import TeacherAuth from "./components/optionalAuth/TeacherAuth";
 
 // styling
 import { makeStyles } from "@material-ui/core/styles";
@@ -71,12 +71,9 @@ function App() {
         });
       } else {
         setUser(null);
-        
       }
     });
   }, [user]);
-
-  // console.log(userDetails);
 
   return (
     <div className="App">
@@ -84,39 +81,70 @@ function App() {
         <Header user={user} signInWithGoogle={signInWithGoogle} />
         {!user ? (
           <Routes>
-            <Route path="/auth-option/teacher" element={<> <TeacherAuth/><OptionalAuth/></>}/>
-            <Route path="/auth-option/student" element={<><StudentAuth/><OptionalAuth/></>}/>
-            <Route path="/auth-option" element={<OptionalAuth/>}/>
-            <Route path="/" element={<Landing user={user} />}/>            
-            </Routes>
+            <Route
+              path="/auth-option/teacher"
+              element={
+                <>
+                  {" "}
+                  <TeacherAuth />
+                  <OptionalAuth />
+                </>
+              }
+            />
+            <Route
+              path="/auth-option/student"
+              element={
+                <>
+                  <StudentAuth />
+                  <OptionalAuth />
+                </>
+              }
+            />
+            <Route path="/auth-option" element={<OptionalAuth />} />
+            <Route path="/" element={<Landing user={user} />} />
+          </Routes>
         ) : (
           <Routes>
-            <Route path="/" exact>
-              <Home user={user} userDetails={userDetails} groups={groups} />
-            </Route>
-            <Route path="/admin">
-              <Admin groups={groups} />
-            </Route>
-            <Route path="/group/:groupId">
-              <GroupDetails user={user} userDetails={userDetails} />
-            </Route>
-            <Route path="/groupRoom/:groupId/:memberId" exact>
-              <>
-                <RateMember user={user} />
+            <Route
+              path="/"
+              exact
+              element={
+                <Home user={user} userDetails={userDetails} groups={groups} />
+              }
+            />
+
+            <Route path="/admin" element={<Admin groups={groups} />} />
+
+            <Route
+              path="/group/:groupId"
+              element={<GroupDetails user={user} userDetails={userDetails} />}
+            />
+
+            <Route
+              path="/groupRoom/:groupId/:memberId"
+              exact
+              element={
+                <>
+                  <RateMember user={user} />
+                  <GroupRoom
+                    user={user}
+                    userDetails={userDetails}
+                    groups={groups}
+                  />
+                </>
+              }
+            />
+
+            <Route
+              path="/groupRoom/:groupId"
+              element={
                 <GroupRoom
                   user={user}
                   userDetails={userDetails}
                   groups={groups}
                 />
-              </>
-            </Route>
-            <Route path="/groupRoom/:groupId">
-              <GroupRoom
-                user={user}
-                userDetails={userDetails}
-                groups={groups}
-              />
-            </Route>
+              }
+            />
           </Routes>
         )}
       </Router>

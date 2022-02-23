@@ -3,8 +3,8 @@ import "./displayGroups.css";
 import GroupLink from "../../components/groupLink/GroupLink";
 
 function DisplayGroups({ groups, userDetails }) {
-  const { id, details } = userDetails;
-  console.log(details);
+  const { details } = userDetails;
+  // console.log(details);
   return (
     <div className="displayGroups">
       {groups ? (

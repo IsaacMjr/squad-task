@@ -33,7 +33,7 @@ function GroupDetails({ user, userDetails }) {
       .update({
         groupMembers: firebase.firestore.FieldValue.arrayUnion({
           memberId: user.uid,
-          memberName: user.displayName.toLower(),
+          memberName: user.displayName.toLowerCase(),
           memberTrait: userDetails.details.averageSkill,
         }),
         memberTraits: firebase.firestore.FieldValue.arrayUnion(
@@ -57,7 +57,7 @@ function GroupDetails({ user, userDetails }) {
       })
       .catch((error) => console.log(error.message));
   };
-  console.log(groupInfo);
+  // console.log(groupInfo);
   return (
     <div className="groupDetails">
       {groupInfo.length === 0 ? (
@@ -94,23 +94,27 @@ function GroupDetails({ user, userDetails }) {
                 )}
               </div>
             </div>
-            {/* {groupInfo?groupMembers.some(
-              (member) => member.memberId === user.uid
-            ) ? (
-              <Link to={`/groupRoom/${params.groupId}`}>
-                <Button variant="contained">
-                  <p className="btn-link">visit group</p>
+            {groupInfo ? (
+              groupInfo.groupMembers.some(
+                (member) => member.memberId === user.uid
+              ) ? (
+                <Link to={`/groupRoom/${params.groupId}`}>
+                  <Button variant="contained">
+                    <p className="btn-link">visit group</p>
+                  </Button>
+                </Link>
+              ) : (
+                <Button
+                  variant="contained"
+                  startIcon={<AddIcon />}
+                  onClick={joinGroup}
+                >
+                  join group
                 </Button>
-              </Link>
+              )
             ) : (
-              <Button
-                variant="contained"
-                startIcon={<AddIcon />}
-                onClick={joinGroup}
-              >
-                join group
-              </Button>
-            ):(<p>okay</p>)} */}
+              <p>okay</p>
+            )}
           </div>
           <div className="grp-desc">group description</div>
         </>

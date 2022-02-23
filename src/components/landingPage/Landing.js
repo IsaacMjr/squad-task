@@ -3,14 +3,13 @@ import "./Landing.css";
 
 import grp from "../../assets/grp.png";
 import Button from "@material-ui/core/Button";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
-function Landing({ signInWithGoogle }) {
-
-  const navigate = useNavigate()
-  const selectSignIn=()=>{
-    navigate("/auth-option")
-  }
+function Landing() {
+  const navigate = useNavigate();
+  const selectSignIn = () => {
+    navigate("/auth-option");
+  };
   return (
     <div className="landing">
       <div className="land-d1-txt">

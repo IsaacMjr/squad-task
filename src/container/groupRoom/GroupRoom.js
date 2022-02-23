@@ -2,12 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./groupRoom.css";
 import Timer from "../../components/timer/Timer";
 
-import {
-  useParams,
-  Link,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { useParams, Link, Routes, Route } from "react-router-dom";
 import { db } from "../../squad-config";
 import moment from "moment";
 
@@ -67,7 +62,7 @@ function GroupRoom({ user, userDetails, groups }) {
       .then(() => alert("reminder has been set"))
       .catch((error) => console.log(error.message));
   };
-  console.log(userDetails);
+  // console.log(userDetails);
   return (
     <div className="groupRoom">
       <div className="groupRoom-nav">
@@ -98,11 +93,11 @@ function GroupRoom({ user, userDetails, groups }) {
                           </span>
 
                           {/* <Link to={`${url}/${member.memberName}`}> */}
-                            <Tooltip title="rate">
-                              <IconButton>
-                                <CreateIcon />
-                              </IconButton>
-                            </Tooltip>
+                          <Tooltip title="rate">
+                            <IconButton>
+                              <CreateIcon />
+                            </IconButton>
+                          </Tooltip>
                           {/* </Link> */}
                         </div>
                       ))

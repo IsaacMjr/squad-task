@@ -60,7 +60,7 @@ function Header({ signInWithGoogle, user }) {
             startIcon={<ExitToAppIcon />}
             onClick={authMenu}
           >
-            SIGN UP
+            LOGIN
           </Button>
         ) : (
           <div className="header-btn-avatar">
