@@ -53,7 +53,7 @@ function App() {
         setUser(user);
 
         db.collection("users")
-          .where("username", "==", user.displayName)
+          .where("uid", "==", user.uid)
           .onSnapshot((snapshot) => {
             snapshot.docs.map((doc) =>
               setUserDetails({ id: doc.id, details: doc.data() })

@@ -96,6 +96,11 @@ function Submission(props) {
   };
   // console.log(user);
   // console.log(analysisValue);
+
+  // export dummy function
+  const trialFunction = () => {
+    console.log("hello world");
+  };
   return (
     <div className="submissions">
       <div style={{ textAlign: "center" }}>
@@ -251,6 +256,7 @@ function Submission(props) {
               <CreateGroup
                 setOpenBackdrop={setOpenBackdrop}
                 submitSurvey={submitSurvey}
+                // submitAdminDetails={trialFunction}
               />
               <div className="sb-close">
                 <IconButton
@@ -271,7 +277,12 @@ function Submission(props) {
             <NavigateBeforeIcon fontSize="large" />
           </IconButton>
         </div>
-        <Button variant="contained" color="primary" onClick={submitSurvey}>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={submitSurvey}
+          // onClick={trialFunction()}
+        >
           Submit
         </Button>
       </div>

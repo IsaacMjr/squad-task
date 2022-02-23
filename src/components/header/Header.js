@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import logo from "../../assets/logo.png";
 import google from "../../assets/google.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import Menu from "@material-ui/core/Menu";
 import Avatar from "@material-ui/core/Avatar";
@@ -41,6 +41,14 @@ function Header({ signInWithGoogle, user }) {
     setAnchorEl(null);
   };
 
+  //  signout user
+  const navigate = useNavigate();
+  const signOutUser = () => {
+    auth.signOut().then(() => {
+      navigate("/");
+    });
+  };
+
   return (
     <div className="header">
       <div className="header-lg">
@@ -73,7 +81,7 @@ function Header({ signInWithGoogle, user }) {
               variant="outlined"
               color="default"
               startIcon={<ExitToAppIcon />}
-              onClick={() => auth.signOut()}
+              onClick={signOutUser}
             >
               SIGN OUT
             </Button>

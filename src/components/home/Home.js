@@ -6,7 +6,8 @@ import DisplayChatroom from "../../container/displayChatrooms/DisplayChatroom";
 
 function Home({ user, userDetails, groups }) {
   const { id, details } = userDetails;
-  // console.log(details);
+  console.log(groups);
+
   return (
     <div className="home">
       {details.isRegistered === true && details.isGrouped === true ? (
