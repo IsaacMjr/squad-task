@@ -4,6 +4,7 @@ import { db } from "../../squad-config";
 
 // material ui components
 import TextField from "@material-ui/core/TextField";
+import { FormControl, Select, MenuItem, InputLabel } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -60,12 +61,27 @@ function CreateGroup({ setOpenBackdrop, submitSurvey }) {
         value={grpLink}
         onChange={(e) => setGrpLink(e.target.value)}
       />
-      <TextField
-        label="courseunit for this group"
-        className={classes.textfield}
-        value={grpUnit}
-        onChange={(e) => setGrpUnit(e.target.value)}
-      />
+
+      <FormControl
+        style={{ width: "250px", marginTop: "10px" }}
+        className={classes.margin}
+      >
+        <InputLabel id="select-course">course unit </InputLabel>
+        <Select
+          labelId="select-course"
+          value={grpUnit}
+          onChange={(e) => setGrpUnit(e.target.value)}
+        >
+          <MenuItem value="emerging trends"> emerging trends</MenuItem>
+          <MenuItem value="research methodology">research methodology</MenuItem>
+          <MenuItem value="communication skills">communication skills</MenuItem>
+          <MenuItem value="integrative programming">
+            integrative programming
+          </MenuItem>
+          <MenuItem value="intelligent systems">intelligent systems</MenuItem>
+        </Select>
+      </FormControl>
+
       <Button
         variant="contained"
         color="secondary"
