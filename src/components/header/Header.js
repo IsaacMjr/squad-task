@@ -10,7 +10,7 @@ import Menu from "@material-ui/core/Menu";
 import Avatar from "@material-ui/core/Avatar";
 import AddIcon from "@material-ui/icons/Add";
 import { makeStyles } from "@material-ui/core/styles";
-import { IconButton, MenuItem } from "@material-ui/core";
+import { IconButton, MenuItem, Tooltip } from "@material-ui/core";
 import { auth } from "../../squad-config";
 const useStyles = makeStyles((theme) => ({
   backdrop: {
@@ -49,6 +49,10 @@ function Header({ signInWithGoogle, user }) {
     });
   };
 
+  // join another group
+  const joinAnotherGroup = () => {
+    navigate("/newgroups");
+  };
   return (
     <div className="header">
       <div className="header-lg">
@@ -72,9 +76,15 @@ function Header({ signInWithGoogle, user }) {
           </Button>
         ) : (
           <div className="header-btn-avatar">
-            <IconButton className={classes.IconBtn} size="small">
-              <AddIcon fontSize="large" />
-            </IconButton>
+            <Tooltip title="join another group">
+              <IconButton
+                className={classes.IconBtn}
+                size="small"
+                onClick={joinAnotherGroup}
+              >
+                <AddIcon fontSize="large" />
+              </IconButton>
+            </Tooltip>
             <Avatar className={classes.avatar} src={user.photoURL} />
             <Button
               className={classes.btn}

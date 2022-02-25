@@ -1,0 +1,7 @@
+.other-root {
+  display: flex;
+  flex-wrap: wrap;
+  width: 98vw;
+  margin-left: auto;
+  margin-right: auto;
+}

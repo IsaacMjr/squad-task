@@ -65,14 +65,25 @@ function GroupDetails({ user, userDetails }) {
       ) : (
         <>
           <div className="grp-details">
-            <div
-              className="grp-image-cont"
-              style={{
-                backgroundImage: `url(${groupInfo.groupLogo})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            ></div>
+            {groupInfo.groupLogo ? (
+              <div
+                className="grp-image-cont"
+                style={{
+                  backgroundImage: `url(${groupInfo.groupLogo})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              ></div>
+            ) : (
+              <div
+                className="grp-image-cont"
+                style={{
+                  backgroundImage: `url(https://reactnativecode.com/wp-content/uploads/2018/02/Default_Image_Thumbnail.png)`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              ></div>
+            )}
           </div>
           <div className="grp-name-btn">
             <div>

@@ -6,7 +6,6 @@ import DisplayChatroom from "../../container/displayChatrooms/DisplayChatroom";
 
 function Home({ user, userDetails, groups }) {
   const { id, details } = userDetails;
-  console.log(groups);
 
   return (
     <div className="home">

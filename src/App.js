@@ -16,6 +16,7 @@ import TeacherAuth from "./components/optionalAuth/TeacherAuth";
 import { makeStyles } from "@material-ui/core/styles";
 import RateMember from "./container/rateMember/RateMember";
 import Admin from "./components/admin/Admin";
+import OtherGrp from "./components/anotherGrpDisplay/OtherGrp";
 
 const useStyles = makeStyles((theme) => ({
   backdrop: {
@@ -81,16 +82,7 @@ function App() {
         <Header user={user} signInWithGoogle={signInWithGoogle} />
         {!user ? (
           <Routes>
-            <Route
-              path="/auth-option/teacher"
-              element={
-                <>
-                  {" "}
-                  <TeacherAuth />
-                  <OptionalAuth />
-                </>
-              }
-            />
+            <Route path="/auth-option/teacher" element={<OptionalAuth />} />
             <Route
               path="/auth-option/student"
               element={
@@ -105,6 +97,10 @@ function App() {
           </Routes>
         ) : (
           <Routes>
+            <Route
+              path="/newgroups"
+              element={<OtherGrp userDetails={userDetails} />}
+            />
             <Route
               path="/"
               exact

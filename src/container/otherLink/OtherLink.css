@@ -1,0 +1,10 @@
+.link-root {
+  margin: 10px;
+  box-shadow: 0px 0px 5px lightblue;
+  width: 20%;
+  height: 29vh;
+}
+.link-logo {
+  height: 80%;
+  width: 100%;
+}
