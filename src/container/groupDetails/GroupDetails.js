@@ -57,7 +57,7 @@ function GroupDetails({ user, userDetails }) {
       })
       .catch((error) => console.log(error.message));
   };
-  // console.log(groupInfo);
+  console.log(groupInfo.groupLogo);
   return (
     <div className="groupDetails">
       {groupInfo.length === 0 ? (
