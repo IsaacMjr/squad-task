@@ -29,11 +29,12 @@ function OtherGrp({ userDetails }) {
         });
     }
   }, [details]);
+  console.log(details);
 
   return (
     <div className="other-root">
-      {groups[0].id === "" ? (
-        <p> loading</p>
+      {groups ? (
+        <p> lecturer has not created groups for this courseunit </p>
       ) : (
         groups.map((group, id) => <OtherLink groups={group} key={id} />)
         // <h1> loo</h1>
