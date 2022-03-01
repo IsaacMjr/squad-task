@@ -28,7 +28,7 @@ function OptionalAuth() {
         <div className="opt-container-options">
           <img src={teacher} alt="teacher" />
           <Button variant="contained" color="primary">
-            <a href="https://lecturersquadtask.web.app/">lecturer</a>
+            <a href="https://lecturer-squadtask.web.app/">lecturer</a>
           </Button>
         </div>
       </div>

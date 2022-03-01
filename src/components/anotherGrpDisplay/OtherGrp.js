@@ -6,12 +6,7 @@ import "./OtherGroup.css";
 function OtherGrp({ userDetails }) {
   // fetch the groups of lecturers
   const { details } = userDetails;
-  const [groups, setGroup] = useState([
-    {
-      id: "",
-      groupData: {},
-    },
-  ]);
+  const [groups, setGroup] = useState([]);
 
   useEffect(() => {
     if (!details.courseunit) {
@@ -29,14 +24,14 @@ function OtherGrp({ userDetails }) {
         });
     }
   }, [details]);
-  console.log(details);
+  console.log(groups);
 
   return (
     <div className="other-root">
-      {groups ? (
-        <p> lecturer has not created groups for this courseunit </p>
-      ) : (
+      {groups.length !== 0 ? (
         groups.map((group, id) => <OtherLink groups={group} key={id} />)
+      ) : (
+        <p> lecturer has not created groups for this courseunit </p>
         // <h1> loo</h1>
       )}
     </div>

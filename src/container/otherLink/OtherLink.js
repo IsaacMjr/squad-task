@@ -23,6 +23,11 @@ function OtherLink({ groups }) {
           alt=""
         />
       )}
+      {groupData.groupName ? (
+        <h4> {groupData.groupName} </h4>
+      ) : (
+        <h4>loading</h4>
+      )}
       <div className="link-btn">
         <Button
           variant="contained"
